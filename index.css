@@ -19,6 +19,7 @@
    height: 30px;
    border-radius: 5px;
    text-indent: 10px;
+   border-width: 1px;
 }
 .btn {
     width: 100px;
@@ -29,6 +30,7 @@
     border-radius: 5px;
     border-color: #4189FD;
     margin-left: 20px;
+    border-style: none;
 }
 .item {
     display: flex;

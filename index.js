@@ -16,7 +16,7 @@ const data = [
 
 var listWarper = document.getElementById("listWarper");
 
-data.forEach(function(innerItem, index) {
+data.forEach(function(innerItem) {
     var item = document.createElement("div");
         item.className = "item";
         var itemleft = document.createElement("div");

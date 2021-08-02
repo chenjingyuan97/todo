@@ -57,7 +57,18 @@
 .text {
     font-size: 14px;
 }
+.opreat {
+    display: flex;
+    flex-direction: row;
+}
 .delete {
+    font-size: 12px;
+    color: red;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.finish {
+    margin-right: 5px;
     font-size: 12px;
     color: #4189FD;
     margin-right: 15px;

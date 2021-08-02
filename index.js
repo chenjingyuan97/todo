@@ -8,26 +8,6 @@ const data = [
 ];
 
 var listWarper = document.getElementById("listWarper");
-var item = document.createElement("div");
-item.className = "item";
-var itemleft = document.createElement("div");
-itemleft.className = "itemleft";
-var click = document.createElement("div");
-click.className = "click";
-var text = document.createElement("div");
-text.className = "text";
-var delet = document.createElement("div");
-delet.className = "delete";
-delet.innerHTML = "删除";
-delet.onclick = function() {
-    console.log(1);
-}
-
-item.appendChild(itemleft);
-item.appendChild(delet);
-itemleft.appendChild(click);
-itemleft.appendChild(text);
-console.log('item', item);
 
 data.forEach(function(item, index) {
     text.index = item.text;
@@ -36,8 +16,31 @@ data.forEach(function(item, index) {
 
 //提交
 function submit() {
-    click.value = false;
-    text.innerText = x.value;
-    listWarper.appendChild(item);
-    console.log(listWarper)
+    if(x.value) {
+        var item = document.createElement("div");
+        item.className = "item";
+        var itemleft = document.createElement("div");
+        itemleft.className = "itemleft";
+        var click = document.createElement("div");
+        click.className = "click";
+        var text = document.createElement("div");
+        text.className = "text";
+        var delet = document.createElement("div");
+        delet.className = "delete";
+        delet.innerHTML = "删除";
+        delet.onclick = function() {
+            document.getElementById("listWarper").removeChild(item);
+        }
+        item.appendChild(itemleft);
+        item.appendChild(delet);
+        itemleft.appendChild(click);
+        itemleft.appendChild(text);
+    
+        click.value = false;
+        text.innerText = x.value;
+        document.getElementById("listWarper").appendChild(item);
+        console.log(listWarper)
+    } else {
+        alert('请输入内容')
+    }
 }
